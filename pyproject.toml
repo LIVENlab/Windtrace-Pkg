@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "windtrace"
+version = "1.0"
+description = "Life-cycle inventory model for onshore wind parks with multi-ecoinvent support"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Package Creator: Miquel Sierra Montoya", email="Miquel.Sierra@uab.cat" },
+  {name = "Lab PI: Cristina Madrid-Lopez", email= "cristina.madrid@ciemat.es"}
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "matplotlib",
+  "geopy",
+  "stats-arrays",
+  "bw2data",
+  "openpyxl",
+  "pyyaml"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest"
+]
+
+dev = [
+  "pytest",
+  "build",
+  "twine"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+windtrace = [
+  "ecoinvent_activity_variables.csv",
+  "clean_data.xlsx"
+]
+
+[project.scripts]
+windtrace-ecoinvent-updater = "windtrace.ecoinvent_variables_updater:main"

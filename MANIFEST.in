@@ -1,0 +1,13 @@
+include README.md
+include LICENSE
+include windtrace_config.example.yml
+include environment.yml
+
+recursive-include src/windtrace *.csv
+recursive-include src/windtrace *.xlsx
+recursive-include notebooks *.ipynb
+recursive-include tests *.py
+
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude .DS_Store

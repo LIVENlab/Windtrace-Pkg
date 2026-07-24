@@ -1,0 +1,10 @@
+brightway:
+  project_name: "windtrace_project_3.12"
+  source_database: "ecoinvent-3.12-cutoff"
+  output_database: "windtrace_db_3.12"
+  biosphere_database: "ecoinvent-3.12-biosphere"
+  spold_files: "PATH/TO/ECOINVENT/SPOLD/FILES"
+
+ecoinvent:
+  version: "3.12"
+  activity_variables_csv: "./ecoinvent_activity_variables.csv"

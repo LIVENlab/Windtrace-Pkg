@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local user config
+windtrace_config.yml
+*.local.yml
+.env
+
+# ecoinvent / Brightway data - do not upload licensed databases
+*.spold
+*.bw2package
+*.7z
+*.zip
+*.tar.gz

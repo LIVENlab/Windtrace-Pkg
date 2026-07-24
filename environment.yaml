@@ -1,0 +1,54 @@
+name: windtrace_env
+
+channels:
+  - cmutel
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python
+  - python=3.13
+  - pip
+
+  # Core scientific stack
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - openpyxl
+
+  # WindTrace helper dependencies
+  - geopy
+  - pyyaml
+  - stats_arrays
+
+  # Brightway / LCA ecosystem
+  - brightway25
+  - bw2data
+  - bw2calc
+  - bw2io
+  - bw2analyzer
+  - bw2parameters
+  - bw_migrations
+  - bw_processing
+  - matrix_utils
+  - pypardiso
+  - pyecospold
+  - ecoinvent_interface
+
+  # Notebook support
+  - jupyterlab
+  - notebook
+  - ipykernel
+
+  # Useful utilities
+  - tqdm
+  - requests
+  - python-dotenv
+  - tabulate
+
+  # Install the local WindTrace package
+  - pip:
+      - multifunctional
+      - bw_simapro_csv
+      - -e .
