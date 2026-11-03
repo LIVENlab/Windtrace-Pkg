@@ -35,7 +35,7 @@ except ImportError:  # Brightway 2.4
 from . import consts
 from . import ecoinvent_activity_variables as _activity_variables
 from .ecoinvent_activity_variables import get_activity_group, get_activity_selector
-from .onshore import (
+from .onshore_improved import (
     build_bw_index,
     find_unique_act,
     manipulate_steel_activities,
